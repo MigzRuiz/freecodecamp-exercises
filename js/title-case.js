@@ -25,3 +25,12 @@ function titleCase(str) {
 }
 
 titleCase("I'm a little tea pot");
+
+//Another solution using the map and replace function
+function titleCase1(str) {
+	str = str.toLowerCase().split(' ').map(word => {
+		return word.replace(word[0], word[0].toUpperCase());
+	});
+	return str.join(" ");
+}
+titleCase1("I'm a little tEa pot");
